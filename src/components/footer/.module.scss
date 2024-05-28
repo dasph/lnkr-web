@@ -1,0 +1,23 @@
+footer {
+  display: flex;
+  padding: 24px;
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--color-secondary);
+  justify-content: space-between;
+
+  div {
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+
+    span:nth-child(even) {
+      font-size: 12px;
+      color: var(--color-tertiary);
+    }
+  }
+
+  @media (min-width: 640px) {
+    padding: 40px 32px;
+  }
+}
