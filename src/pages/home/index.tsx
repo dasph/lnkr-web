@@ -5,7 +5,7 @@ import { Footer, Header } from '@components'
 
 import styles from './.module.scss'
 
-export const Home: Component = () => {
+export default (() => {
   return (
     <Default>
       <Header />
@@ -13,4 +13,4 @@ export const Home: Component = () => {
       <Footer />
     </Default>
   )
-}
+}) satisfies Component

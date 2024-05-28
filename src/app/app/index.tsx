@@ -1,6 +1,5 @@
-import type { Component } from 'solid-js'
-
 import { Router } from '@solidjs/router'
+import { Suspense, type Component } from 'solid-js'
 
 import { routes } from '@app'
 
@@ -12,6 +11,6 @@ type Props = {
 
 export const App: Component<Props> = ({ path }) => {
   return (
-    <Router url={path} children={routes} />
+    <Suspense children={<Router url={path} children={routes} />} />
   )
 }

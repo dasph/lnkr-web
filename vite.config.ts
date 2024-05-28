@@ -20,6 +20,7 @@ const common: UserConfigExport = {
 
 const client: UserConfigExport = {
   build: {
+    manifest: true,
     target: 'esnext',
     outDir: './dist/client'
   },

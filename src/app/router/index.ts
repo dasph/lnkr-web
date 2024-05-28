@@ -1,11 +1,11 @@
 import { RouteDefinition } from '@solidjs/router'
 
-import { Home, NotFound } from '@pages'
+import { pages } from '@pages'
 
 export const routes = [{
   path: '/',
-  component: Home
+  component: pages['home']
 }, {
   path: '/404',
-  component: NotFound
+  component: pages['not-found']
 }] satisfies RouteDefinition<string>[]
