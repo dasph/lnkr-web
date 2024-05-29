@@ -9,7 +9,7 @@
     "serve": "vite preview --outDir ./dist/client",
     "build:client": "vite build -m client",
     "build:server": "vite build -m server",
-    "build:pages": "node ./dist/server/index.cjs",
+    "build:pages": "node ./dist/server",
     "build": "pnpm build:client && pnpm build:server && pnpm build:pages"
   },
   "license": "MIT",

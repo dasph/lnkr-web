@@ -38,9 +38,6 @@ const server: UserConfigExport = {
     rollupOptions: {
       input: {
         index: './src/server.tsx'
-      },
-      output: {
-        format: 'cjs'
       }
     }
   }
