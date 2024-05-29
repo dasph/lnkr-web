@@ -35,5 +35,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
+          cname: www.lndb.cc
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist/client
