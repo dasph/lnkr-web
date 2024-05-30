@@ -1,2 +1,1 @@
-export const Author = 'Andrew Nyzhnyk'
-
+export const author = 'Andrew Nyzhnyk'
