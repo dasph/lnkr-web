@@ -11,6 +11,7 @@ const common: UserConfigExport = {
       '@pages': '/src/pages',
       '@types': '/src/types',
       '@assets': '/src/assets',
+      '@helpers': '/src/helpers',
       '@layouts': '/src/layouts',
       '@components': '/src/components'
     }
