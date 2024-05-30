@@ -27,6 +27,8 @@ jobs:
 
       - name: Install 🔧
         run: pnpm install --frozen-lockfile
+        env:
+          VITE_API_URL: ${{ vars.VITE_API_URL }}
 
       - name: Build 🏗️
         run: pnpm build
