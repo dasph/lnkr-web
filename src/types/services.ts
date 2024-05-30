@@ -1,4 +1,4 @@
-import type { PublicKeyCredentialCreationOptionsJSON, RegistrationResponseJSON } from '@simplewebauthn/types'
+import type { AuthenticationResponseJSON, PublicKeyCredentialCreationOptionsJSON, PublicKeyCredentialRequestOptionsJSON, RegistrationResponseJSON } from '@simplewebauthn/types'
 
 import { AuthPayload } from './api'
 
@@ -10,6 +10,8 @@ type Service<N, M, P, R> = {
 }
 
 type List = [
+  Service<'auth/signin', 'get', {}, AuthPayload<PublicKeyCredentialRequestOptionsJSON>>,
+  Service<'auth/signin', 'post', AuthPayload<AuthenticationResponseJSON>, { verified: boolean }>,
   Service<'auth/signup', 'get', { name: string }, AuthPayload<PublicKeyCredentialCreationOptionsJSON>>,
   Service<'auth/signup', 'post', AuthPayload<RegistrationResponseJSON>, { verified: boolean }>
 ]
