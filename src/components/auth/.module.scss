@@ -1,0 +1,45 @@
+.module {
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
+
+  .signup {
+    gap: .25em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .divider {
+    width: 100%;
+    color: gray;
+    text-align: center;
+    position: relative;
+
+    &::before, &::after {
+      left: 0;
+      content: '';
+      height: .5px;
+      position: absolute;
+      background: rgb(117, 117, 117);
+      top: calc(50% - 1px);
+      width: calc(50% - 6ch);
+    }
+
+    &::after {
+      right: 0;
+      left: unset;
+    }
+  }
+
+  .signin {
+    text-align: center;
+
+    a {
+      color: var(--color-secondary);
+    }
+  }
+
+  .copy {
+    cursor: pointer;
+  }
+}
