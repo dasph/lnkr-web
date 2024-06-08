@@ -10,6 +10,9 @@ type Service<N, M, P, R> = {
 }
 
 type List = [
+  Service<'', 'post', { value: string, tags: string[] }, { alias: string }>,
+  Service<'auth/refresh', 'get', {}, {}>,
+  Service<'auth/signout', 'get', {}, {}>,
   Service<'auth/signin', 'get', {}, AuthPayload<PublicKeyCredentialRequestOptionsJSON>>,
   Service<'auth/signin', 'post', AuthPayload<AuthenticationResponseJSON>, { verified: boolean }>,
   Service<'auth/signup', 'get', { name: string }, AuthPayload<PublicKeyCredentialCreationOptionsJSON>>,

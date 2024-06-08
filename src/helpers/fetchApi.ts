@@ -2,9 +2,9 @@ import type { Error, Methods, Payloads, Responses, Services } from '@types'
 
 type Init = <T extends { [K in keyof T]: T[K] }> (payload: T) => RequestInit
 
-const get: Init = (payload) => ({ method: 'get', headers: payload })
+const get: Init = (payload) => ({ credentials: 'include', method: 'get', headers: payload })
 
-const post: Init = (payload) => ({ method: 'post', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload) })
+const post: Init = (payload) => ({ credentials: 'include', method: 'post', headers: { 'content-type': 'application/json' }, body: JSON.stringify(payload) })
 
 const init: Record<Methods[keyof Methods], Init> = { get, post }
 
