@@ -8,7 +8,7 @@
     "src": "src/assets/favicon.svg"
   },
   "src/assets/index.html": {
-    "file": "assets/index-D2oLUVsh.js",
+    "file": "assets/index-HfBqOitV.js",
     "name": "index",
     "src": "src/assets/index.html",
     "isEntry": true,
@@ -17,7 +17,7 @@
       "src/pages/not-found/index.tsx"
     ],
     "css": [
-      "assets/index-DxXDGevs.css"
+      "assets/index-HIkwdyjH.css"
     ],
     "assets": [
       "assets/favicon-B2RhxdfK.ico",
@@ -25,7 +25,7 @@
     ]
   },
   "src/pages/home/index.tsx": {
-    "file": "assets/index-CbGb8uY4.js",
+    "file": "assets/index-BLZw9WyK.js",
     "name": "index",
     "src": "src/pages/home/index.tsx",
     "isDynamicEntry": true,
@@ -33,11 +33,11 @@
       "src/assets/index.html"
     ],
     "css": [
-      "assets/index-Ux55zDlT.css"
+      "assets/index-CcDl4G-D.css"
     ]
   },
   "src/pages/not-found/index.tsx": {
-    "file": "assets/index-BN5fAvTf.js",
+    "file": "assets/index--MM7G4Ay.js",
     "name": "index",
     "src": "src/pages/not-found/index.tsx",
     "isDynamicEntry": true,
