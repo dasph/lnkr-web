@@ -8,7 +8,7 @@
     "src": "src/assets/favicon.svg"
   },
   "src/assets/index.html": {
-    "file": "assets/index-sreXXBlT.js",
+    "file": "assets/index-D00lxlfI.js",
     "name": "index",
     "src": "src/assets/index.html",
     "isEntry": true,
@@ -25,7 +25,7 @@
     ]
   },
   "src/pages/home/index.tsx": {
-    "file": "assets/index-CnTW581n.js",
+    "file": "assets/index-CD2M0U4z.js",
     "name": "index",
     "src": "src/pages/home/index.tsx",
     "isDynamicEntry": true,
@@ -37,7 +37,7 @@
     ]
   },
   "src/pages/not-found/index.tsx": {
-    "file": "assets/index-Ex_6ekbc.js",
+    "file": "assets/index-BE5lt2Pn.js",
     "name": "index",
     "src": "src/pages/not-found/index.tsx",
     "isDynamicEntry": true,
