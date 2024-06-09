@@ -7,6 +7,7 @@ export type Point = Record<'x' | 'y', string>
 
 export type Link = {
   id: number
+  alias: string
   value: string
   createdAt: Date
 }
