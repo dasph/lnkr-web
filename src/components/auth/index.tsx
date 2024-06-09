@@ -46,7 +46,7 @@ export const Auth: VoidComponent<Props> = (props) => {
   const signout = () => fetchApi('auth/signout', 'get', {}).then(() => setAuth(false))
 
   const submit = async () => {
-    const { alias } = await fetchApi('', 'post', { tags: [], value: link() }).catch(() => ({ alias: '' }))
+    const { alias } = await fetchApi('link', 'post', { tags: [], value: link() }).catch(() => ({ alias: '' }))
 
     setLink('')
     setAlias(alias)

@@ -1,6 +1,6 @@
 import type { AuthenticationResponseJSON, PublicKeyCredentialCreationOptionsJSON, PublicKeyCredentialRequestOptionsJSON, RegistrationResponseJSON } from '@simplewebauthn/types'
 
-import { AuthPayload } from './api'
+import { AuthPayload, Hit, Link } from './api'
 
 type Service<N, M, P, R> = {
   name: N
@@ -10,13 +10,16 @@ type Service<N, M, P, R> = {
 }
 
 type List = [
-  Service<'', 'post', { value: string, tags: string[] }, { alias: string }>,
   Service<'auth/refresh', 'get', {}, {}>,
   Service<'auth/signout', 'get', {}, {}>,
   Service<'auth/signin', 'get', {}, AuthPayload<PublicKeyCredentialRequestOptionsJSON>>,
   Service<'auth/signin', 'post', AuthPayload<AuthenticationResponseJSON>, { verified: boolean }>,
   Service<'auth/signup', 'get', { name: string }, AuthPayload<PublicKeyCredentialCreationOptionsJSON>>,
-  Service<'auth/signup', 'post', AuthPayload<RegistrationResponseJSON>, { verified: boolean }>
+  Service<'auth/signup', 'post', AuthPayload<RegistrationResponseJSON>, { verified: boolean }>,
+
+  Service<'link', 'get', {}, Link[]>,
+  Service<`link/${number}`, 'get', {}, Hit[]>,
+  Service<'link', 'post', { value: string, tags: string[] }, { alias: string }>
 ]
 
 export type Error = { error: string }
