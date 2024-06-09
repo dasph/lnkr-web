@@ -1,0 +1,1 @@
+import{g as t,c as a,a as s,t as l}from"./index-po46MIuh.js";const r="_module_12k6f_1",m={module:r};var o=l("<div>404");const n=()=>(()=>{var e=t(o);return a(()=>s(e,m.module)),e})();export{n as default};
