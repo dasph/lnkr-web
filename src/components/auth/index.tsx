@@ -45,6 +45,13 @@ export const Auth: VoidComponent<Props> = (props) => {
 
   const signout = () => fetchApi('auth/signout', 'get', {}).then(() => setAuth(false))
 
+  const submit = async () => {
+    const { alias } = await fetchApi('', 'post', { tags: [], value: link() }).catch(() => ({ alias: '' }))
+
+    setLink('')
+    setAlias(alias)
+  }
+
   return (
     <section class={`${styles.module} ${props.className || ''}`}>
       {auth() ? <input type='button' value='Log out' onClick={signout} /> : (<>
@@ -61,10 +68,10 @@ export const Auth: VoidComponent<Props> = (props) => {
       {auth() && (<>
         <div class={styles.signup}>
           <input type='text' placeholder='url' value={link()} onInput={({ target: { value } }) => setLink(value)} />
-          <input type='button' value='Continue' onClick={() => fetchApi('', 'post', { tags: [], value: link() }).catch(() => ({ alias: '' })).then(({ alias }) => setAlias(alias))} disabled={!isHttpUrl()} />
+          <input type='button' value='Submit' onClick={submit} disabled={!isHttpUrl()} />
         </div>
 
-        <span class={styles.copy} onClick={() => navigator.clipboard.writeText(url())} >{url()}</span>
+        <span class={styles.copy} onClick={() => navigator.clipboard.writeText(url())}>{url()}</span>
       </>)}
     </section>
   )
